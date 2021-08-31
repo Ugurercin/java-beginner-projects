@@ -40,7 +40,7 @@ public class Hamburger {
     }
 
     public void addHamburgerAddition2(String addition2Name, double addition2Price){
-        if(addition1Name.isEmpty()){
+        if(addition2Name.isEmpty()){
             System.out.println("No extra addition has been made into hamburger.");
         }
         else{
@@ -50,7 +50,7 @@ public class Hamburger {
     }
 
     public void addHamburgerAddition3(String addition3Name, double addition3Price){
-        if(addition1Name.isEmpty()){
+        if(addition3Name.isEmpty()){
             System.out.println("No extra addition has been made into hamburger.");
         }
         else{
@@ -60,7 +60,7 @@ public class Hamburger {
     }
 
     public void addHamburgerAddition4(String addition4Name, double addition4Price){
-        if(addition1Name.isEmpty()){
+        if(addition4Name.isEmpty()){
             System.out.println("No extra addition has been made into hamburger.");
         }
         else{
