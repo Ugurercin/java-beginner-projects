@@ -16,12 +16,12 @@ public class Hamburger {
 
     private String itemizeHamburger;
 
-    public Hamburger(String name, String meat, String breadRollType, double price) {
+    public Hamburger(String name, String meat, double price, String breadRollType) {
         this.name = name;
         this.meat = meat;
         this.breadRollType = breadRollType;
         this.price = price;
-        System.out.println(name + " hamburger on a white roll with" + meat + ", price is : " + price);
+        System.out.println(name + " hamburger on a " + breadRollType + " roll with " + meat + ", price is : " + price + "$");
     }
 
     public double itemizeHamburger(){
