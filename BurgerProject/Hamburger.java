@@ -14,60 +14,54 @@ public class Hamburger {
     private double addition3Price;
     private double addition4Price;
 
-    private String itemizeHamburger;
-
-    public Hamburger(String name, String meat, double price, String breadRollType) {
+    public Hamburger(String name, String meat, String breadRollType, double price) {
         this.name = name;
         this.meat = meat;
         this.breadRollType = breadRollType;
         this.price = price;
-        System.out.println(name + " hamburger on a " + breadRollType + " roll with " + meat + ", price is : " + price + "$");
+    }
+
+    public void addHamburgerAddition1(String name, double price){
+        this.addition1Name = name;
+        this.addition1Price = price;
+    }
+
+    public void addHamburgerAddition2(String name, double price){
+        this.addition2Name = name;
+        this.addition2Price = price;
+    }
+
+    public void addHamburgerAddition3(String name, double price){
+        this.addition3Name = name;
+        this.addition3Price = price;
+    }
+
+    public void addHamburgerAddition4(String name, double price){
+        this.addition4Name = name;
+        this.addition4Price = price;
     }
 
     public double itemizeHamburger(){
-        System.out.println("The total cost of a hamburger is : " + this.price);
-        return this.price;
+        double hamburgerCost = this.price;
+        System.out.println(this.name + " hamburger " + " on a " + this.breadRollType + " roll " + " price is " + this.price + "$");
+        if(this.addition1Name != null){
+            hamburgerCost += addition1Price;
+            System.out.println(addition1Name + " added as an extra ingredient for a price of : " + addition1Price + "$");
+        }
+        if(this.addition2Name != null){
+            hamburgerCost += addition2Price;
+            System.out.println(addition2Name + " added as an extra ingredient for a price of : " + addition2Price + "$");
+        }
+        if(this.addition3Name != null){
+            hamburgerCost += addition3Price;
+            System.out.println(addition3Name + " added as an extra ingredient for a price of : " + addition3Price + "$");
+        }
+        if(this.addition4Name != null){
+            hamburgerCost += addition4Price;
+            System.out.println(addition4Name + " added as an extra ingredient for a price of : " + addition4Price + "$");
+        }
+        System.out.println("Total burger cost it : " + hamburgerCost + "$");
+        return hamburgerCost;
     }
-
-    public void addHamburgerAddition1(String addition1Name, double addition1Price){
-        if(addition1Name.isEmpty()){
-            System.out.println("No extra addition has been made into hamburger.");
-        }
-        else{
-            System.out.println("Added" + addition1Name + " for an extra : " + addition1Price);
-            this.price += addition1Price;
-        }
-    }
-
-    public void addHamburgerAddition2(String addition2Name, double addition2Price){
-        if(addition2Name.isEmpty()){
-            System.out.println("No extra addition has been made into hamburger.");
-        }
-        else{
-            System.out.println("Added" + addition2Name + " for an extra : " + addition2Price);
-            this.price += addition2Price;
-        }
-    }
-
-    public void addHamburgerAddition3(String addition3Name, double addition3Price){
-        if(addition3Name.isEmpty()){
-            System.out.println("No extra addition has been made into hamburger.");
-        }
-        else{
-            System.out.println("Added" + addition3Name + " for an extra : " + addition3Price);
-            this.price += addition3Price;
-        }
-    }
-
-    public void addHamburgerAddition4(String addition4Name, double addition4Price){
-        if(addition4Name.isEmpty()){
-            System.out.println("No extra addition has been made into hamburger.");
-        }
-        else{
-            System.out.println("Added" + addition4Name + " for an extra : " + addition4Price);
-            this.price += addition4Price;
-        }
-    }
-
 
 }
